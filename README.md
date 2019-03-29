@@ -3,7 +3,7 @@
 How to reproduce https://github.com/golang/go/issues/30768
 
 - `go get -d github.com/yunabe/gobug30768`
-- (cd /tmp && rm pkg -rf && go install -buildmode=shared -linkshared -pkgdir pkg std && go build -linkshared -pkgdir pkg github.com/yunabe/gobug30768 && ldd gobug30768)
+- `(cd /tmp && rm pkg -rf && go install -buildmode=shared -linkshared -pkgdir pkg std && go build -linkshared -pkgdir pkg github.com/yunabe/gobug30768 && ldd gobug30768)`
 
 # Expected
 `go build` outputs a binary and `ldd` shows information like:
